@@ -190,12 +190,14 @@ az monitor log-analytics workspace get-shared-keys \
 _Use the customerId and primarySharedKey from above as WORKSPACE_ID and WORKSPACE_KEY:_
 
 ### Create a Container Apps Environment (logical home/cluster for apps)
+```
 az containerapp env create \
   --name devops-env \
   --resource-group devops-rg \
   --location switzerlandnorth \
   --logs-workspace-id "<WORKSPACE_ID>" \
   --logs-workspace-key "<WORKSPACE_KEY>"
+```
 
 # 6. Create the Container App from the ACR image
 ### Get ACR credentials (username + passwords) for Container Apps to pull images
@@ -203,7 +205,7 @@ az containerapp env create \
 az acr credential show \
   --name kevweacr \
   --resource-group devops-rg
-  ```
+```
 
 ### Create the Container App using the image from ACR
 ```
