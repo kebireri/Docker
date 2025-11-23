@@ -1,11 +1,15 @@
-from flask import Flask
+from flask import Flask, jsonify
 
 app = Flask(__name__)
 
 @app.route("/")
 
 def home():
-    return "Hello from your Study Buddy app!" 
+    data = {
+            "message": "Study Buddy API is running",
+            "status": "ok"
+        }
+    return jsonify(data) 
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
