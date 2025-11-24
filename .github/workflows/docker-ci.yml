@@ -19,6 +19,7 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Build Docker image
+        working-directory: ./study-buddy-api
         run: |
           IMAGE_NAME=${{ secrets.DOCKERHUB_USERNAME }}/study-buddy-api
           IMAGE_TAG=${{ github.sha }}
