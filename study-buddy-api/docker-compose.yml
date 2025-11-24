@@ -1,6 +1,6 @@
 services:
   api:
-    build: .
+    image: kebireri/study-buddy-api:latest
     container_name: study-buddy-api
     ports:
       - "5000:5000"
