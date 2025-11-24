@@ -29,3 +29,4 @@ jobs:
           IMAGE_NAME=${{ secrets.DOCKERHUB_USERNAME }}/study-buddy-api
           IMAGE_TAG=${{ github.sha }}
           docker push $IMAGE_NAME:$IMAGE_TAG
+#CI
